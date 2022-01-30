@@ -5,9 +5,6 @@ package guru.qa;
  */
 public class Price {
 
-    private String person;
-    private boolean child;
-    private int childAge;
 
     public static void main(String[] args){
 

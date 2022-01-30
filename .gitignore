@@ -23,7 +23,7 @@
 *.rar
 *.iml
 
-# Project gen files
+# Project generic files
 .idea
 .allure/
 .gradle/
