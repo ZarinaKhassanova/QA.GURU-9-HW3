@@ -12,7 +12,7 @@ public class Variations {
     String city;
     String airline;
 
-    public void printInfo() {
+    public void printPriceInfo() {
         System.out.println("[Страна - " + country + "/город " + city + " (" + airline + "). Стоимость - $"
                 + price + ". Количество дней: " + days + ". Наличие страховки: " + ((insurance) ? "есть" : "нет") + "]");
     }
