@@ -5,7 +5,6 @@ package guru.qa;
  */
 public class Price {
 
-
     public static void main(String[] args){
 
         Variations sriLanka = new Variations();
@@ -15,7 +14,7 @@ public class Price {
         sriLanka.price = 750;
         sriLanka.days = 7;
         sriLanka.airline = "AirAstana";
-        sriLanka.printInfo();
+        sriLanka.printPriceInfo();
 
         Variations turkie = new Variations();
         turkie.insurance = true;
@@ -24,7 +23,7 @@ public class Price {
         turkie.price = 1050;
         turkie.days = 10;
         turkie.airline = "Scat";
-        turkie.printInfo();
+        turkie.printPriceInfo();
 
         Variations egipt = new Variations();
         egipt.insurance = true;
@@ -33,7 +32,7 @@ public class Price {
         egipt.price = 550;
         egipt.days = 13;
         egipt.airline = "Scat";
-        egipt.printInfo();
+        egipt.printPriceInfo();
 
         Variations thailand = new Variations();
         thailand.insurance = false;
@@ -42,7 +41,7 @@ public class Price {
         thailand.price = 650;
         thailand.days = 10;
         thailand.airline = "AirAstana";
-        thailand.printInfo();
+        thailand.printPriceInfo();
 
     }
 
