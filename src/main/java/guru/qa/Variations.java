@@ -14,30 +14,44 @@ public class Variations {
     protected String city;
     protected String airline;
 
-    //region price calculation
+    //region PriceCalculation
     public double setPriceTour() {
-        return (((child) ? 1: 0) * days * priceInDay * 0.5) + (person * days * priceInDay);
+        double cost;
+        int childCount = 0;
+
+        if (child) {
+            childCount = 1;
+        }
+
+        cost = (childCount * days * priceInDay * 0.5) + (person * days * priceInDay);
+        return cost;
     }
     //endregion
 
-    //region print info
+    //region setNight
+    public int setNight() {
+        return days - 1;
+    }
+
+    //endregion
+
+    //region PrintInfo
     public void printInfoTour() {
-        System.out.println("[Страна - " + country + "/г. " + city + " (" + airline + ").]");
+        System.out.println("\n[Страна - " + country + "/г. " + city + " (" + airline
+                + "). Кол-во дней: " + days + "/ночей " + setNight()
+                + ". Страховка: " + ((insurance) ? "есть" : "нет") +"]");
     }
 
     public void printPriceInfoOnePerson() {
-        System.out.println("[1 взр.] Кол-во дней: " + days + ". Страховка: " + ((insurance) ? "есть" : "нет") +
-                ". Стоимость - $" + setPriceTour() + "]");
+        System.out.println("[1 взр.] [Стоимость - $" + setPriceTour() + "]");
     }
 
     public void printPriceInfoTwoPerson() {
-        System.out.println("[2 взр.] Кол-во дней: " + days + ". Страховка: " + ((insurance) ? "есть" : "нет") +
-                ". Стоимость - $" + setPriceTour() + "]");
+        System.out.println("[2 взр.] [Стоимость - $" + setPriceTour() + "]");
     }
 
     public void printPriceInfoTwoPersonWithChild() {
-        System.out.println("[2 взр. + 1 реб.] Кол-во дней: " + days + ". Страховка: " + ((insurance) ? "есть" : "нет") +
-                ". Стоимость - $" + setPriceTour() + "]");
+        System.out.println("[2 взр. + 1 реб.] [Стоимость - $" + setPriceTour() + "]");
     }
     //endregion
 
